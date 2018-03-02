@@ -50,7 +50,7 @@ namespace Mjcheetham
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void GreaterThan(long n, int limit, string name)
         {
-            if (n < limit) throw new ArgumentOutOfRangeException(name);
+            if (n <= limit) throw new ArgumentOutOfRangeException(name);
         }
 
         /// <summary>
@@ -62,7 +62,7 @@ namespace Mjcheetham
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void GreaterThanOrEqual(long n, long limit, string name)
         {
-            if (n <= limit) throw new ArgumentOutOfRangeException(name);
+            if (n < limit) throw new ArgumentOutOfRangeException(name);
         }
 
         /// <summary>
@@ -74,7 +74,7 @@ namespace Mjcheetham
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LessThan(long n, long limit, string name)
         {
-            if (n > limit) throw new ArgumentOutOfRangeException(name);
+            if (n >= limit) throw new ArgumentOutOfRangeException(name);
         }
 
         /// <summary>
@@ -86,7 +86,7 @@ namespace Mjcheetham
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void LessThanOrEqual(long n, long limit, string name)
         {
-            if (n >= limit) throw new ArgumentOutOfRangeException(name);
+            if (n > limit) throw new ArgumentOutOfRangeException(name);
         }
 
         #endregion
