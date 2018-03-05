@@ -31,5 +31,10 @@ namespace Mjcheetham
                 }
             }
         }
+
+        public static SlidingWindow<T> GetSlidingWindow<T>(this IEnumerable<T> source, int windowSize)
+        {
+            return new SlidingWindow<T>(source, windowSize);
+        }
     }
 }
